@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://res.cloudinary.com/dzc7wad0j/image/upload/v1711352297/top-view-tasty-mayyonaise-salad-with-sliced-fresh-vegetables-black_140725-41244_plyppm.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  padding: 20px;
+  align-items: center;
+}
+
+.recipe {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+.recipe p{
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.recipe h2 {
+  color: #333;
+}
+
+.recipe img {
+  width: 200px; /* Set width to 200px */
+  height: 200px; /* Set height to 200px */
+  border-radius: 10px; /* Apply border radius */
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.recipe p {
+  color: #555;
+}
+
+.recipe ul,
+.recipe ol {
+  margin-left: 20px;
+  color: #555;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  text-align: center;
+}

@@ -1,0 +1,353 @@
+/* Importing Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .logo {
+  color: black;
+  font-weight: 600;
+  font-size: 2.1rem;
+  text-decoration: none;
+}
+
+.navbar .logo span {
+  color: #C06B3E;
+}
+.menu-links {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-links li {
+  display: inline-block;
+}
+
+.menu-links li a {
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding as needed */
+  margin-right: 10px; /* Adjust margin between buttons */
+  text-decoration: none;
+  color: #fff;
+  background-color: #831f1f; /* Button background color */
+  border-radius: 5px; /* Button border radius */
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.menu-links li a:hover {
+  background-color: #a93232; /* Button background color on hover */
+}
+
+/* Styling for close and hamburger buttons */
+.material-symbols-outlined {
+  cursor: pointer;
+  color: #831f1f; /* Adjust color */
+  font-size: 20px; /* Adjust font size */
+  margin-right: 10px; /* Adjust margin */
+}
+
+
+
+.navbar a:hover::after {
+  background-color: #C06B3E; /* Change the color on hover */
+}
+
+
+.hero-section {
+  height: 100vh;
+  background-image: url("https://res.cloudinary.com/dzc7wad0j/image/upload/v1711125357/healthy-vegetables-dryfruits-oil-raw-fish-wooden-table_23-2148026882_ql9eol.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  color:black;
+}
+
+.hero-section .content h2 {
+  font-size: 3rem;
+  max-width: 600px;
+  line-height: 70px;
+}
+
+.hero-section .content p {
+  font-weight: 300;
+  max-width: 600px;
+  margin-top: 15px;
+  color: #100c0c;
+}
+
+.hero-section .content button {
+  background:rgb(222, 203, 203);
+  padding: 12px 30px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 38px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.hero-section .content button:hover {
+  color: rgb(214, 206, 206);
+  background: #773009;
+}
+
+#close-menu-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+#hamburger-btn {
+  color: #c98e8e;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  header.show-mobile-menu::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+  }
+
+  .navbar .logo {
+    font-size: 1.7rem;
+  }
+
+    
+  #hamburger-btn, #close-menu-btn {
+    display: block;
+  }
+
+  .navbar .menu-links {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: firebrick;
+    flex-direction: column;
+    padding: 70px 40px 0;
+    transition: left 0.2s ease;
+  }
+
+  header.show-mobile-menu .navbar .menu-links {
+    left: 0;
+  }
+
+  .navbar a {
+    color: #000;
+  }
+
+  .hero-section .content {
+    text-align: center;
+  }
+
+  .hero-section .content :is(h2, p) {
+    max-width: 100%;  
+  }
+
+  .hero-section .content h2 {
+    font-size: 2.3rem;
+    line-height: 60px;
+  }
+  
+  .hero-section .content button {
+    padding: 9px 18px;
+  }
+}
+.features {
+  display: flex;
+  flex-direction: row; /* Align features vertically */
+  align-items: center; /* Center the features horizontally */
+  margin-top: 40px;
+  
+  
+}
+
+.feature {
+  flex: 1;
+  width: 100%; /* Ensure each feature occupies full width */
+  max-width: 400px; /* Set a maximum width for each feature */
+  margin-bottom: 50px; /* Adjust the gap between features */
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right: 100px;
+}
+
+.feature h2 {
+  color: #5d1f1f;
+}
+.feature.a h2{
+  color:#8b1a23;
+}
+
+.background-image {
+  background-image: url('https://res.cloudinary.com/dzc7wad0j/image/upload/v1711125357/healthy-vegetables-dryfruits-oil-raw-fish-wooden-table_23-2148026882_ql9eol.jpg'); /* Replace 'background_image.jpg' with your image path */
+  background-size: cover;
+  background-position: left;
+  height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+
+.container {
+  max-width: 500px;
+  width: 200%;
+}
+
+.chat-box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: transparent; /* Set background color to transparent */
+  text-transform: capitalize;
+  text-decoration-color: black;
+}
+
+.chat-container {
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  color: black;
+}
+
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.user {
+  background-color: #e6f2ff;
+  text-align: right;
+}
+
+.expert {
+  background-color: #d9ead3;
+  text-align: left;
+}
+
+.input-container {
+  display: flex;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 8px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #8b1a23;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #971919;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.hero-section .content {
+  animation: fadeIn 1s ease forwards;
+}
+
+.navbar .menu-links {
+  animation: slideIn 0.5s ease forwards;
+}
+
+/* Adding animation to button hover effect */
+.navbar a {
+  color:#000;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #C06B3E;
+}
+
+.hero-section .content button {
+  background: #ec6363;
+  padding: 12px 30px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 38px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hero-section .content button:hover {
+  color: #983737;
+  background: #53260d;
+}
