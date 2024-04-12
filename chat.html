@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plan Expert Chat</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <div class="background-image">
+        <div class="container">
+            <div class="chat-box">
+                <div class="chat-container" id="chat-container">
+                  <h1> <p>Chat for instant answers and tips from the experts..<br>Start your Journey Today..!!</p></h1>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="user-input" placeholder="Type your message...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var userInput = document.getElementById('user-input').value;
+            var chatContainer = document.getElementById('chat-container');
+
+            if (userInput.trim() !== '') {
+                var userMessage = '<div class="message user">' + userInput + '</div>';
+                chatContainer.innerHTML += userMessage;
+
+                // Simulate expert's response (replace with actual logic)
+                var expertResponse = '<div class="message expert">Sure, let me help you with a personalized diet plan.</div>';
+                setTimeout(function() {
+                    chatContainer.innerHTML += expertResponse;
+                    // Scroll to the bottom of chat window
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                }, 500);
+                
+                // Clear the input field
+                document.getElementById('user-input').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
